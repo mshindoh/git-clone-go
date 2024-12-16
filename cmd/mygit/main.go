@@ -8,7 +8,7 @@ import (
 // Usage: your_program.sh <command> <arg1> <arg2> ...
 func main() {
 	// You can use print statements as follows for debugging, they'll be visible when running tests.
-	fmt.Fprintf(os.Stderr, "Logs from your program will appear here!\n")
+	// fmt.Fprintf(os.Stderr, "Logs from your program will appear here!\n")
 
 	if len(os.Args) < 2 {
 		fmt.Fprintf(os.Stderr, "usage: mygit <command> [<args>...]\n")
@@ -17,7 +17,6 @@ func main() {
 
 	switch command := os.Args[1]; command {
 	case "init":
-		Uncomment this block to pass the first stage!
 		
 		for _, dir := range []string{".git", ".git/objects", ".git/refs"} {
 			if err := os.MkdirAll(dir, 0755); err != nil {
